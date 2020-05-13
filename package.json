@@ -10,9 +10,8 @@
   "author": "Jessica Sachs <jess@jessicasachs.io>",
   "license": "MIT",
   "scripts": {
-    "dev": "concurrently --names=\"Client,Server\" -c=\"magenta.bold,cyan.bold\" yarn:watch:client yarn:watch:server",
-    "watch:server": "nodemon src/index.js",
-    "watch:client": "tsc -w src/index.ts",
+    "dev": "concurrently --names=\"Server\" -c=\"magenta.bold,cyan.bold\" yarn:watch:server",
+    "watch:server": "nodemon src/index.ts",
     "build": "tsc src/index.ts",
     "start": "node src/index.js",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
@@ -38,6 +37,7 @@
     "nodemon": "^2.0.3",
     "prettier": "^2.0.5",
     "ts-jest": "^25.4.0",
+    "ts-node": "^8.10.1",
     "tslint": "^6.1.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.8.3"
