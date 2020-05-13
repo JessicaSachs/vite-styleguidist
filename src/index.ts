@@ -13,8 +13,11 @@ const myPlugin = ({
   watcher // chokidar file watcher instance
 }: PluginOptions) => {
 
+  console.log('plugin being activated')
   // handle my beautiful docgen route
   app.use(async (ctx: any, next: any) => {
+
+    console.log("REQUEST", ctx)
     // You can do pre-processing here - this will be the raw incoming requests
     // before vite touches it.
     if (ctx.path.endsWith('.scss')) {
@@ -40,7 +43,7 @@ const myPlugin = ({
   })
 }
 
+console.log('creating a server')
 createServer({
   plugins: [myPlugin],
-  root: '../'
 }).listen(3000)

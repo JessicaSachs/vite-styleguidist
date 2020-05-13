@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -35,6 +34,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var _this = this;
 var createServer = require('vite').createServer;
 var myPlugin = function (_a) {
     var root = _a.root, // project root directory, absolute path
@@ -42,11 +42,13 @@ var myPlugin = function (_a) {
     server = _a.server, // raw http server instance
     watcher = _a.watcher // chokidar file watcher instance
     ;
+    console.log('plugin being activated');
     // handle my beautiful docgen route
-    app.use(function (ctx, next) { return __awaiter(void 0, void 0, void 0, function () {
+    app.use(function (ctx, next) { return __awaiter(_this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
+                    console.log("REQUEST", ctx);
                     // You can do pre-processing here - this will be the raw incoming requests
                     // before vite touches it.
                     if (ctx.path.endsWith('.scss')) {
@@ -79,7 +81,7 @@ var myPlugin = function (_a) {
         });
     }); });
 };
+console.log('creating a server');
 createServer({
-    plugins: [myPlugin],
-    root: '../'
+    plugins: [myPlugin]
 }).listen(3000);

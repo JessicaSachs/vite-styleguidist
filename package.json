@@ -2,24 +2,25 @@
   "name": "vite-styleguidist",
   "description": "Styleguidist, using Vite ⚡️ with Vue 3 support",
   "version": "0.0.0",
-  "main": "lib/index.js",
+  "main": "lib/index.ts",
   "types": "lib/index.d.ts",
   "files": [
-    "lib/**/*",
-    "lib/index.html"
+    "lib/index.ts"
   ],
   "author": "Jessica Sachs <jess@jessicasachs.io>",
   "license": "MIT",
   "scripts": {
-    "watch": "tsc -w",
-    "build": "tsc",
+    "dev": "yarn watch && nodemon src/index.js",
+    "watch": "tsc -w src/index.ts",
+    "build": "tsc src/index.ts",
+    "start": "node src/index.js",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "test": "jest --config jest.config.json",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn lint",
+    "version": "yarn format && git add -A src",
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
