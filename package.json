@@ -12,16 +12,9 @@
   "scripts": {
     "dev": "concurrently --names=\"Server\" -c=\"magenta.bold,cyan.bold\" yarn:watch:server",
     "watch:server": "nodemon src/index.ts",
-    "build": "tsc src/index.ts",
-    "start": "node src/index.js",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "test": "jest --config jest.config.json",
-    "prepare": "yarn build",
-    "prepublishOnly": "yarn test && yarn lint",
-    "preversion": "yarn lint",
-    "version": "yarn format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "test": "jest --config jest.config.json"
   },
   "dependencies": {
     "lodash": "^4.17.15",
