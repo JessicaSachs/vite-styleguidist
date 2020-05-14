@@ -19,7 +19,8 @@
   "dependencies": {
     "lodash": "^4.17.15",
     "vite": "^0.14.3",
-    "vue": "^3.0.0-beta.12"
+    "vue": "next",
+    "vue-router": "^4.0.0-alpha.11"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",

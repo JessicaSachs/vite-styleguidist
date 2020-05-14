@@ -1,12 +1,32 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es2015"],
-    "module": "commonjs",
-    "declaration": true,
-    "outDir": "./lib",
-    "strict": true
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable"
+    ]
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*", "**/*.spec*"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

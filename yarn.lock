@@ -6160,7 +6160,12 @@ vite@^0.14.3:
     vue "^3.0.0-beta.12"
     ws "^7.2.3"
 
-vue@^3.0.0-beta.12:
+vue-router@^4.0.0-alpha.11:
+  version "4.0.0-alpha.11"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.0-alpha.11.tgz#17b0f31ae6b0284ee0895b03904cf1738989aa0e"
+  integrity sha512-GEgKq7rlwdv03QcGqADZg+Es8D6R8FfZRLSj0Ardx/sK8PiIxpt5ViwW94Zh2LuIEiuM1U5v8iyTBya0UBK61g==
+
+vue@^3.0.0-beta.12, vue@next:
   version "3.0.0-beta.12"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.0.0-beta.12.tgz#e72d1baeede285768d2df0f2b52dc79427f49419"
   integrity sha512-4Y8LPplndYp48q1P8CSbG3Et/bPcMQB11edusA6SuIGmgrLdS4Ntdwpjtc9kglYHaY9/E/VTVjl4jAGqpAFR1w==
