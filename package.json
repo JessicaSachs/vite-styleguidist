@@ -17,6 +17,8 @@
     "test": "jest --config jest.config.json"
   },
   "dependencies": {
+    "koa-json": "^2.0.2",
+    "koa-router": "^8.0.8",
     "lodash": "^4.17.15",
     "vite": "^0.14.3",
     "vue": "next",
@@ -24,6 +26,9 @@
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
+    "@types/koa": "^2.11.3",
+    "@types/koa-json": "^2.0.18",
+    "@types/koa-router": "^7.4.0",
     "@types/lodash": "^4.14.150",
     "@types/node": "^13.13.2",
     "concurrently": "^5.2.0",
