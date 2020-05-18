@@ -17,14 +17,11 @@ export const styleguidist = ({
     }
 
     const query = ctx.query;
-    // first load config file
+    // 1. load config file
 
-    // second glob all the files in an array
+    // 2. glob all the files in an array (using chokidar or globby?)
 
-    // third make a watcher for the glob
-    // by adding the glob to chokidar
-
-    ctx.type = "js";
+    // 3. make a watcher for the glob by adding the glob to chokidar
 
     // for each component found, in the tranformed string
     // - import its docgen => create a plugin for that with .docgen
@@ -33,7 +30,8 @@ export const styleguidist = ({
     // - export default the components array
 
     // Next step: group components by sections
-    //
+
+    ctx.type = "js";
     ctx.body = `export default [{name: "${query.config}"}]`;
     return ctx;
   });
