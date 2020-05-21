@@ -10,6 +10,7 @@ import { ServerPluginContext } from 'vite';
  */
 export const prettyjson = ({ app }: ServerPluginContext) => {
   app.use(
+    /* @ts-ignore WHY */
     json({
       pretty: false,
       param: 'pretty'
