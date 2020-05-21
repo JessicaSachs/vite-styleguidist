@@ -1,4 +1,4 @@
-import json from 'koa-json'
+import * as json from 'koa-json'
 import { ServerPluginContext } from 'vite';
 
 /**

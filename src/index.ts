@@ -4,5 +4,5 @@ import { createServer } from 'vite'
 const port = 3000
 console.log('Creating a server at', `http://localhost:3000`)
 createServer({
-  plugins: [styleguidist, prettyjson],
+  configureServer: [styleguidist, prettyjson]
 }).listen(port)
