@@ -1,4 +1,4 @@
-import * as json from 'koa-json'
+import json from 'koa-json'
 import { ServerPluginContext } from 'vite';
 
 /**
@@ -10,7 +10,6 @@ import { ServerPluginContext } from 'vite';
  */
 export const prettyjson = ({ app }: ServerPluginContext) => {
   app.use(
-    /* @ts-ignore WHY */
     json({
       pretty: false,
       param: 'pretty'
