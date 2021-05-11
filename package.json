@@ -19,7 +19,7 @@
   "dependencies": {
     "koa-json": "^2.0.2",
     "koa-router": "^8.0.8",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "vite": "0.16.4",
     "vue": "next",
     "vue-router": "^4.0.0-alpha.11"
