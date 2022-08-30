@@ -20,7 +20,7 @@
     "koa-json": "^2.0.2",
     "koa-router": "^8.0.8",
     "lodash": "^4.17.15",
-    "vite": "0.16.4",
+    "vite": "2.9.13",
     "vue": "next",
     "vue-router": "^4.0.0-alpha.11"
   },
